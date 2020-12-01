@@ -15,7 +15,7 @@ const deploy = async () => {
     var accounts = await web3.eth.getAccounts();
     var result = await new web3.eth.Contract(abi).deploy({ data: bytecode.object }).send({ from: accounts[0], gas: 1000000 });
     console.log("Successfully Deployed");
-    console.log(result.options.address);
+    console.log("Contract address : ", result.options.address);
 }
 
 deploy();
