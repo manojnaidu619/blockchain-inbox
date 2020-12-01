@@ -13,7 +13,7 @@ beforeEach(async () => {
     // Create a contract object and send the transaction to the network
     contract = await new web3.eth.Contract(abi)
         .deploy({ data: bytecode.object })
-        .send({ from: accounts[0], gas: 1500000, gasPrice: '30000000000000' })
+        .send({ from: accounts[0], gas: 1000000 })
     
     // Save the contract address
     contractAddress = await contract.options.address;
